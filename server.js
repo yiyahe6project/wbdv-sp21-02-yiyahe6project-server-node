@@ -2,8 +2,10 @@
 const express = require('express')
 const app = express()
 
+const local_mongodb = 'mongodb://localhost:27017/whiteboard'
+const remote_mongodb = 'mongodb+srv://yhe:i2T8t2zTa9YQewMY@cluster0.bdvgp.mongodb.net/whiteboard'
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/whiteboard',
+mongoose.connect(remote_mongodb,
     {useNewUrlParser: true, useUnifiedTopology: true});
 
 
